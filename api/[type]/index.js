@@ -10,8 +10,6 @@ export default (req) => {
 	const out = {}
 	out[type] = data[type]
 	return Response.json({
-		name: `${params}`,
-		file: '[type]/index.js',
 		data: out
 	});
 };

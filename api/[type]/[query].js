@@ -20,7 +20,6 @@ export default (req) => {
 	const out = {};
 	out[type] = data[type].filter(item => item.id == query);
 	return Response.json({
-		params: `${params}`,
 		data: data[type].filter(item => item.id == query)
 	});
 };
