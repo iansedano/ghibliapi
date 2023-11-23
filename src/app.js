@@ -28,6 +28,8 @@ filterFields = (obj, fields) => {
 }
 
 router.render = (req, res) => {
+  res.setHeader('Access-Control-Allow-Credentials', true)
+  res.setHeader('Access-Control-Allow-Origin', '*')
   const defaultLimit = 50
   const maxLimit = 250
   var data = res.locals.data
